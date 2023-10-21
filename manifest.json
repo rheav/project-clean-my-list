@@ -1,0 +1,20 @@
+{
+	"manifest_version": 3,
+	"name": "cleanMyList",
+	"version": "1.0",
+	"description": "Chrome extension for cleaning your saved items Amazon list - it's yours, for God's sake!",
+	"permissions": ["activeTab", "scripting", "tabs"],
+	"author": "Victor Rhea",
+	"icons": {},
+	"action": {
+		"default_popup": "popup.html"
+	},
+	"background": {},
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["content.js"]
+		}
+	],
+	"host_permissions": ["https://*/*"]
+}
